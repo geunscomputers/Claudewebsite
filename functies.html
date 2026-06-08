@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functies — Claude Uitleg</title>
+  <meta name="description" content="Wat kan Claude allemaal? Een overzicht van de belangrijkste functies: schrijven, coderen, analyseren, brainstormen, vertalen en uitleggen." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Pagina-specifieke stijl */
+    .example-block {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .chat-bubble {
+      padding: 16px 20px;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      max-width: 85%;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .chat-bubble.user {
+      background: var(--black);
+      color: var(--white);
+      margin-left: auto;
+      border-bottom-right-radius: 6px;
+    }
+
+    .chat-bubble.claude {
+      background: var(--white);
+      color: var(--black);
+      border-bottom-left-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .chat-meta {
+      font-size: 12px;
+      color: var(--grey);
+      margin-bottom: 6px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .chat-meta.user { text-align: right; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    <span>Claude Uitleg</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Wat is Claude?</a></li>
+    <li><a href="functies.html" class="active">Functies</a></li>
+    <li><a href="tips.html">Tips</a></li>
+    <li><a href="contact.html">Over</a></li>
+  </ul>
+  <a href="https://claude.ai" target="_blank" rel="noopener" class="nav-cta">Probeer Claude</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Wat is Claude?</a>
+  <a href="functies.html" onclick="toggleMenu()">Functies</a>
+  <a href="tips.html" onclick="toggleMenu()">Tips</a>
+  <a href="contact.html" onclick="toggleMenu()">Over</a>
+  <a href="https://claude.ai" target="_blank" rel="noopener">Probeer Claude →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <p class="hero-eyebrow">Mogelijkheden</p>
+  <h1>Eén assistent.<br>Veel talenten.</h1>
+  <p>Claude is een echte alleskunner. Of u nu wil schrijven, programmeren, analyseren of brainstormen — u hoeft maar te vragen.</p>
+  <div class="hero-actions">
+    <a href="#functies" class="btn-primary">Bekijk de functies</a>
+    <a href="tips.html" class="btn-secondary">Naar de tips</a>
+  </div>
+</section>
+
+<!-- ── 6 FUNCTIES ── -->
+<section id="functies">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Zes hoofdtaken</p>
+      <h2 class="section-title">Wat kan Claude voor u doen?</h2>
+      <p class="section-sub">Een greep uit de dingen waar Claude dagelijks bij helpt — van praktische tot creatieve taken.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3l7 7-13 13H3v-7z"/>
+            <path d="M14 5l7 7"/>
+          </svg>
+        </div>
+        <h3>Schrijven</h3>
+        <p>E-mails opstellen, blogartikels redigeren, lange documenten samenvatten, of helpen bij creatief schrijven. Claude past zich aan uw toon aan.</p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 6l-5 7 5 7M18 6l5 7-5 7M15 4l-4 18"/>
+          </svg>
+        </div>
+        <h3>Programmeren</h3>
+        <p>Code schrijven in tientallen programmeertalen, foutmeldingen debuggen, of stap voor stap uitleggen hoe een functie werkt. Ook voor beginners.</p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 17a2 2 0 0 1-2 2H5l-2 2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M8 9h10M8 13h6"/>
+          </svg>
+        </div>
+        <h3>Analyseren</h3>
+        <p>Lange documenten doorploegen, contracten checken op valkuilen, een PDF samenvatten, of patronen vinden in tekst en data.</p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2a8 8 0 0 0-5 14v3a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-3a8 8 0 0 0-5-14z"/>
+            <path d="M10 23h6"/>
+          </svg>
+        </div>
+        <h3>Brainstormen</h3>
+        <p>Tien naamideeën voor een product, argumenten voor en tegen een beslissing, of een planning voor een project. Een denkpartner op afroep.</p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h13M9 3v3M5 6c0 6 4 11 9 14M14 19l-3-3M13 14h10M19 11v3M14 22c5-1 9-5 9-11"/>
+          </svg>
+        </div>
+        <h3>Vertalen</h3>
+        <p>Tussen Nederlands, Frans, Engels, Duits en tientallen andere talen. Niet alleen letterlijk maar met aandacht voor toon en context.</p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="13" cy="13" r="10"/>
+            <path d="M10 10a3 3 0 0 1 6 0c0 2-3 2-3 4M13 19h.01"/>
+          </svg>
+        </div>
+        <h3>Uitleg geven</h3>
+        <p>Een ingewikkeld onderwerp helder uitgelegd, op uw niveau. Vraag gerust door als iets onduidelijk is — Claude legt het anders uit.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── VOORBEELDGESPREK ── -->
+<section style="background: var(--light);">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">In de praktijk</p>
+      <h2 class="section-title">Zo ziet een gesprek eruit</h2>
+      <p class="section-sub">U typt iets in alledaagse taal — Claude doet de rest.</p>
+    </div>
+
+    <div class="example-block fade-up">
+      <p class="chat-meta user">U</p>
+      <div class="chat-bubble user">Schrijf een korte bedankmail naar een klant die net een laptop heeft gekocht in onze winkel.</div>
+
+      <p class="chat-meta">Claude</p>
+      <div class="chat-bubble claude">
+        <strong>Onderwerp:</strong> Bedankt voor uw aankoop bij Geuns Computers<br><br>
+        Beste klant,<br><br>
+        Hartelijk dank voor uw vertrouwen in Geuns Computers. We hopen dat u veel plezier zal beleven aan uw nieuwe laptop.<br><br>
+        Heeft u nog vragen over de installatie of werking? Aarzel niet om ons te contacteren — we helpen u graag verder.<br><br>
+        Vriendelijke groeten,<br>
+        Het team van Geuns Computers
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 32px; color: var(--grey); font-size: 14px;" class="fade-up">
+      Voorbeeld ter illustratie — pas zelf aan naar uw stijl.
+    </p>
+  </div>
+</section>
+
+<!-- ── CTA NAAR TIPS ── -->
+<section>
+  <div class="section-inner" style="text-align: center;">
+    <div class="fade-up">
+      <p class="section-eyebrow">Klaar om te beginnen?</p>
+      <h2 class="section-title">Haal het meeste uit Claude</h2>
+      <p class="section-sub">Een goede vraag stellen is de halve oplossing. Op de volgende pagina vindt u praktische tips.</p>
+      <div style="margin-top: 32px;">
+        <a href="tips.html" class="btn-primary">Bekijk de tips →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Claude Uitleg</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Wat is Claude?</a></li>
+      <li><a href="functies.html">Functies</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="contact.html">Over</a></li>
+      <li><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai →</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Claude Uitleg · Een leerproject door Mario Geuns · Claude is een product van Anthropic.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
