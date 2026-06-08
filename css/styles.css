@@ -14,8 +14,9 @@
   --grey: #6e6e73;
   --light: #f5f5f7;
   --white: #ffffff;
-  --accent: #cc785c;       /* Anthropic Claude-oranje */
-  --accent-hover: #d68a6e;
+  --accent: #1f4e96;       /* Geuns Computers blauw */
+  --accent-hover: #2853a6;
+  --accent-light: #e8eef8; /* Lichte tint voor backgrounds */
   --border: #d2d2d7;
   --radius: 18px;
   --nav-height: 52px;
@@ -83,7 +84,7 @@ nav {
 .nav-links a.active { opacity: 1; font-weight: 500; }
 
 .nav-cta {
-  background: var(--black);
+  background: var(--accent);
   color: var(--white);
   font-size: 13px;
   font-weight: 500;
@@ -92,7 +93,7 @@ nav {
   transition: background 0.2s;
 }
 
-.nav-cta:hover { background: #333; }
+.nav-cta:hover { background: var(--accent-hover); }
 
 /* ── HAMBURGER (mobile) ── */
 .nav-hamburger {
@@ -162,7 +163,7 @@ nav {
   position: absolute;
   width: 700px; height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(204,120,92,0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(31,78,150,0.12) 0%, transparent 70%);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -217,23 +218,23 @@ nav {
 }
 
 .btn-primary {
-  background: var(--black);
+  background: var(--accent);
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: #333;
+  background: var(--accent-hover);
   transform: scale(1.02);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--black);
-  border: 1.5px solid var(--black);
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
 }
 
 .btn-secondary:hover {
-  background: var(--black);
+  background: var(--accent);
   color: var(--white);
   transform: scale(1.02);
 }
