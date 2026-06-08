@@ -8,9 +8,11 @@
 *.swp
 *.swo
 
+# Build output (uitvoer van build.sh)
+dist/
+
 # Node (voor later, als we Vite toevoegen)
 node_modules/
-dist/
 .env
 .env.local
 
