@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Over — Claude Uitleg</title>
+  <meta name="description" content="Over dit project: een leerproject in HTML, CSS en JavaScript met als doel een eenvoudige uitleg te geven over Claude." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    }
+
+    .info-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .info-row:last-child { border-bottom: none; }
+    .info-row span:first-child { color: var(--grey); }
+    .info-row span:last-child,
+    .info-row a {
+      font-weight: 500;
+      color: var(--black);
+      text-align: right;
+      text-decoration: none;
+    }
+
+    .info-row a { color: var(--accent); }
+    .info-row a:hover { text-decoration: underline; }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .tech-badge {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 980px;
+    }
+
+    .disclaimer {
+      background: #fff8e6;
+      border: 1px solid #f0d878;
+      border-radius: 14px;
+      padding: 24px 28px;
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .disclaimer-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #f5d550;
+      color: #6b4f00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .disclaimer h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #6b4f00;
+    }
+
+    .disclaimer p {
+      font-size: 14px;
+      color: #5a4400;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    <span>Claude Uitleg</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Wat is Claude?</a></li>
+    <li><a href="functies.html">Functies</a></li>
+    <li><a href="tips.html">Tips</a></li>
+    <li><a href="contact.html" class="active">Over</a></li>
+  </ul>
+  <a href="https://claude.ai" target="_blank" rel="noopener" class="nav-cta">Probeer Claude</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Wat is Claude?</a>
+  <a href="functies.html" onclick="toggleMenu()">Functies</a>
+  <a href="tips.html" onclick="toggleMenu()">Tips</a>
+  <a href="contact.html" onclick="toggleMenu()">Over</a>
+  <a href="https://claude.ai" target="_blank" rel="noopener">Probeer Claude →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <p class="hero-eyebrow">Over dit project</p>
+  <h1>Een leerproject.<br>Bouwen terwijl je leert.</h1>
+  <p>Deze website werd gemaakt om te oefenen met webontwikkeling — HTML, CSS, JavaScript en Git. Het onderwerp: een heldere uitleg over Claude.</p>
+  <div class="hero-actions">
+    <a href="#over" class="btn-primary">Lees het verhaal</a>
+    <a href="https://github.com/geunscomputers/Claudewebsite" target="_blank" rel="noopener" class="btn-secondary">Bekijk de code</a>
+  </div>
+</section>
+
+<!-- ── HET VERHAAL ── -->
+<section id="over">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Het verhaal</p>
+      <h2 class="section-title">Waarom deze website?</h2>
+    </div>
+
+    <div class="prose fade-up">
+      <p class="lead">Iedereen praat over AI, maar weinig mensen weten wat het in de praktijk betekent. Deze site geeft een eenvoudige, eerlijke uitleg over Claude — zonder jargon, zonder hype.</p>
+
+      <p>Tegelijk is dit een persoonlijk leerproject. Stap voor stap werd elke pagina opgebouwd: eerst de structuur, dan de stijl, dan de inhoud. Zonder build-tools, zonder frameworks — gewoon HTML, CSS en JavaScript zoals het hoort.</p>
+
+      <p>Elke commit staat publiek op GitHub. Wie nieuwsgierig is naar hoe een eenvoudige website in elkaar zit, kan de geschiedenis gewoon doorbladeren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── INFO CARDS ── -->
+<section style="background: var(--light);">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">In een notendop</p>
+      <h2 class="section-title">Project &amp; auteur</h2>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="info-card fade-up">
+        <h3>Auteur</h3>
+        <div class="info-row">
+          <span>Naam</span><span>Mario Geuns</span>
+        </div>
+        <div class="info-row">
+          <span>Bedrijf</span><a href="https://www.geunscomputers-winkelvoorraad.be" target="_blank" rel="noopener">Geuns Computers</a>
+        </div>
+        <div class="info-row">
+          <span>Locatie</span><span>Geel, België</span>
+        </div>
+        <div class="info-row">
+          <span>E-mail</span><a href="mailto:info@geunscomputers.be">info@geunscomputers.be</a>
+        </div>
+      </div>
+
+      <div class="info-card fade-up">
+        <h3>Project</h3>
+        <div class="info-row">
+          <span>Type</span><span>Leerproject</span>
+        </div>
+        <div class="info-row">
+          <span>Onderwerp</span><span>Uitleg over Claude</span>
+        </div>
+        <div class="info-row">
+          <span>Repository</span><a href="https://github.com/geunscomputers/Claudewebsite" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+        <div class="info-row">
+          <span>Gestart</span><span>Juni 2026</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="max-width: 1000px; margin: 32px auto 0;" class="fade-up">
+      <div class="info-card">
+        <h3>Gebruikte technologie</h3>
+        <p style="color: var(--grey); font-size: 14px; margin-bottom: 4px;">Geen frameworks, geen build-stap — pure web fundamentals.</p>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Git</span>
+          <span class="tech-badge">GitHub</span>
+          <span class="tech-badge">Cursor</span>
+          <span class="tech-badge">Claude Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DISCLAIMER ── -->
+<section>
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Goed om te weten</p>
+      <h2 class="section-title">Niet officieel</h2>
+    </div>
+
+    <div class="disclaimer fade-up">
+      <div class="disclaimer-icon">!</div>
+      <div>
+        <h4>Dit is geen officiële Claude- of Anthropic-site</h4>
+        <p>Claude is een product van <a href="https://www.anthropic.com" target="_blank" rel="noopener" style="color: #6b4f00; text-decoration: underline;">Anthropic</a>. Deze website is een onafhankelijk leerproject zonder enige band met of goedkeuring door Anthropic. Voor officiële informatie, productdocumentatie of supportverzoeken verwijzen we u door naar <a href="https://www.anthropic.com" target="_blank" rel="noopener" style="color: #6b4f00; text-decoration: underline;">anthropic.com</a> of <a href="https://claude.ai" target="_blank" rel="noopener" style="color: #6b4f00; text-decoration: underline;">claude.ai</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA: BEGIN VAN VOREN ── -->
+<section style="background: var(--light);">
+  <div class="section-inner" style="text-align: center;">
+    <div class="fade-up">
+      <p class="section-eyebrow">Bedankt voor het lezen</p>
+      <h2 class="section-title">Klaar om Claude zelf te proberen?</h2>
+      <p class="section-sub">U weet nu wat Claude is, wat het kan, en hoe u er goed mee werkt. Tijd om aan de slag te gaan.</p>
+      <div style="margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://claude.ai" target="_blank" rel="noopener" class="btn-primary">Open claude.ai →</a>
+        <a href="index.html" class="btn-secondary">Terug naar het begin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Claude Uitleg</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Wat is Claude?</a></li>
+      <li><a href="functies.html">Functies</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="contact.html">Over</a></li>
+      <li><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai →</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Claude Uitleg · Een leerproject door Mario Geuns · Claude is een product van Anthropic.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
