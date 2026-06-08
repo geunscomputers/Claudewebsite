@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (voor later, als we Vite toevoegen)
+node_modules/
+dist/
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Claude Code lokale data
+.claude/
